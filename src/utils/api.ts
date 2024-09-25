@@ -1,8 +1,5 @@
 import axios from 'axios';
 import { Pokemon, PokemonDetails } from '../types/pokemon';
-import app from 'next/app';
-
-
 
 
 

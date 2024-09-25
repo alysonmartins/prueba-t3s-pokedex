@@ -16,6 +16,30 @@ export default function Home() {
   const [generationFilter, setGenerationFilter] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
+  // Carregar os valores do localStorage na inicialização
+  useEffect(() => {
+    const savedSearchTerm = localStorage.getItem('searchTerm') || '';
+    const savedTypeFilter = localStorage.getItem('typeFilter') || '';
+    const savedGenerationFilter = localStorage.getItem('generationFilter') || '';
+
+    setSearchTerm(savedSearchTerm);
+    setTypeFilter(savedTypeFilter);
+    setGenerationFilter(savedGenerationFilter);
+  }, []);
+
+  // Salva os valores no localStorage quando eles mudam
+  useEffect(() => {
+    localStorage.setItem('searchTerm', searchTerm);
+  }, [searchTerm]);
+
+  useEffect(() => {
+    localStorage.setItem('typeFilter', typeFilter);
+  }, [typeFilter]);
+
+  useEffect(() => {
+    localStorage.setItem('generationFilter', generationFilter);
+  }, [generationFilter]);
+
   useEffect(() => {
     const fetchPokemon = async () => {
       setIsLoading(true);
@@ -43,7 +67,7 @@ export default function Home() {
   }, [searchTerm, typeFilter, generationFilter, pokemon]);
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-10">
       <h1 className="text-4xl font-bold my-8 text-center text-white">Pokédex</h1>
       <div className="mb-8 flex gap-4 max-sm:flex-col max-sm:items-center">
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
