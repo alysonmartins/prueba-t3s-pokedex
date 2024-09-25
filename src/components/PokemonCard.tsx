@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Pokemon } from '../types/pokemon';
+import type { Pokemon } from '../types/pokemon';
 
 interface PokemonCardProps {
   pokemon: Pokemon;

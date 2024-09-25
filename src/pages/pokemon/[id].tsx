@@ -40,7 +40,7 @@ export default function PokemonDetailsPage() {
               {pokemon.types.map((type) => (
                 <span
                   key={type}
-                  className="px-2 py-1 text-sm text-white rounded"
+                  className="px-2 py-1 text-sm text-white rounded capitalize"
                   style={{ backgroundColor: getTypeColor(type) }}
                 >
                   {type}

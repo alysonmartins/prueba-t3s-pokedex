@@ -1,30 +1,62 @@
-# Create T3 App
+# Pokémon Project
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This project is a Pokédex application built with Next.js and TypeScript, using the Poké API to display information about Pokémon.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- List all Pokémon with their name, generation, and types
+- Filter Pokémon by type and generation
+- Search Pokémon by name (including evolutions)
+- View detailed information about each Pokémon, including stats and evolution chain
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Prerequisites
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- Node.js (v14 or later)
+- npm or yarn
 
-## Learn More
+## Getting Started
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+1. Clone the repository:
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+```bash
+git clone https://github.com/alysonmartins/prueba-t3s-pokedex.git
+cd prueba-t3s-pokedex
+```
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+2. Install dependencies:
 
-## How do I deploy this?
+```bash
+npm install
+# or
+yarn install
+```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
-# prueba-t3s-pokedex
+3. Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+- `src/pages/`: Contains the main pages of the application
+- `src/components/`: Reusable React components
+- `src/types/`: TypeScript type definitions
+- `src/utils/`: Utility functions and API calls
+- `src/styles/`: Global styles
+
+## Built With
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/)
+- [SWR](https://swr.vercel.app/)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
